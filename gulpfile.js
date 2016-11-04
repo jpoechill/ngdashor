@@ -33,8 +33,9 @@ gulp.task('browser-sync', function() {
 // Sass
 gulp.task('sass', function () {
   return gulp.src('dev/scss/**/*.scss')
-    .pipe(sass())
-    .pipe(cssnano())
+    // .pipe(sass())
+    // .pipe(cssnano())
+    .pipe(concat('styles.main.css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dev/css/'))
     .pipe(bs.reload({ // Reloading with Browser Sync
