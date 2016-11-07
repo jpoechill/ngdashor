@@ -1,35 +1,47 @@
 <h2>Key Metrics</h2>
+<p>
+  <a href="#/">Back</a>
+</p>
+<div class="row">
+  <div class="col-md-6" ng-controller="LineCtrl">
+    # of Paying Customers
+    <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options"
+    chart-dataset-override="datasetOverride" chart-click="onClick" chart-colors="colors">
+    </canvas>
+  </div>
+  <div class="col-md-6" ng-controller="BarCtrl">
+    # of Reported Issues
+    <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series" chart-colors="colors">
+    </canvas>
+  </div>
+</div>
+<div class="row" style="padding-top: 14px;">
+  <div class="col-md-6" ng-controller="DoughnutCtrl">
+    # of Open Issues
+    <canvas id="doughnut" class="chart chart-doughnut"
+      chart-data="data" chart-labels="labels" chart-colors="colors">
+    </canvas>
+  </div>
+  <div class="col-md-6" ng-controller="RadarCtrl">
+    A Radar Chart
+    <canvas id="radar" class="chart chart-radar"
+  chart-data="data" chart-options="options" chart-labels="labels" chart-colors="colors">
+</canvas>
+  </div>
+</div>
 <!-- <div class="row">
-  <div class="col-md-4">
-    <p>
-      Open Issues
-    </p>
-    <p>
-      <img src="img/metrics-thumb3.png" width="100%" style="border-radius: 20px;" alt="" />
-    </p>
+  <div class="col-md-6">
+    <img src="img/barchart.png" width="100%" alt="" />
   </div>
-  <div class="col-md-4">
-    <p>
-      Paying Customers (line-chart)
-    </p>
-    <p>
-      <img src="img/metrics-thumb3.png" width="100%" style="border-radius: 20px;" alt="" />
-    </p>
-  </div>
-  <div class="col-md-4">
-    <p>
-      Reported Issues (bar-chart)
-    </p>
-    <p>
-      <img src="img/metrics-thumb3.png" width="100%" style="border-radius: 20px;" alt="" />
-    </p>
+  <div class="col-md-6">
+    <img src="img/linechart.png" width="100%" alt="" />
   </div>
 </div> -->
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-12">
     <img src="img/portland-dash.png" width="100%" alt="" />
   </div>
-</div>
+</div> -->
 <!-- <div ng-controller="SalesController">
   <p>
     <h1>Today's Sales Chart</h1>

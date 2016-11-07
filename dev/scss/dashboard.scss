@@ -87,7 +87,7 @@ body {
 
 .placeholders {
   margin-bottom: 0px;
-  text-align: center;
+  text-align: left;
 }
 .placeholders h4 {
   margin-bottom: 0;
@@ -97,5 +97,7 @@ body {
 }
 .placeholder img {
   display: inline-block;
-  border-radius: 50%;
+  // border-radius: 20%;
 }
+
+#mapid { height: 500px; }

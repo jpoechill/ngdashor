@@ -1,69 +1,42 @@
-<h2>Issues</h2>SORT | FILTER
-<div class="table-responsive">
-  <table class="table table-striped">
+<!--  Start Header -->
+<h2>Issues</h2>
+<p>
+  <a href="#/">Back</a>
+</p>
+<!--  End Header -->
+
+<!--  Start Data Table, with Pagination-->
+<div class="">
+  <table st-table="rowCollection" class="table table-striped">
     <thead>
-      <tr>
-        <th>ID</th>
-        <th style="width: 10%;">Name</th>
-        <th>Timestamp</th>
-        <th style="width: 12%;">Customer Name</th>
-        <th>Customer Email</th>
-        <th>Description</th>
-        <th>Status</th>
-        <th style="width: 12%;">Employee Name</th>
-      </tr>
+    <tr>
+      <th colspan="8"><input st-search="" class="form-control" placeholder="Search DB..." type="text"/></th>
+    </tr>
+    <tr>
+      <th st-sort="id">ID</th>
+      <th st-sort="name">Name</th>
+      <th st-sort="timestamp">Timestamp</th>
+      <th st-sort="customer">Customer</th>
+      <th st-sort="customeremail" style="white-space: nowrap;">Customer Email</th>
+      <th st-sort="description">Description</th>
+      <th st-sort="status">Status</th>
+      <th st-sort="employees">Employee</th>
+    </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>000</td>
-        <td>Header Bug</td>
-        <td>00:01:00</td>
-        <td>Airbnb</td>
-        <td>mary.george@airbnb.com</td>
-        <td>Change-makers pathway to a better life globalization women and children challenges of our times combat malaria respond democracy human potential. Safeguards support human rights, civil society global leaders. </td>
-        <td>Open</td>
-        <td>Robert Engineer</td>
-      </tr>
-      <tr>
-        <td>001</td>
-        <td>Header Bug</td>
-        <td>00:01:00</td>
-        <td>Airbnb</td>
-        <td>mary.george@airbnb.com</td>
-        <td>Change-makers pathway to a better life globalization women and children challenges of our times combat malaria respond democracy human potential. Safeguards support human rights, civil society global leaders. </td>
-        <td>Open</td>
-        <td>Robert Engineer</td>
-      </tr>
-      <tr>
-        <td>002</td>
-        <td>Header Bug</td>
-        <td>00:01:00</td>
-        <td>Airbnb</td>
-        <td>mary.george@airbnb.com</td>
-        <td>Change-makers pathway to a better life globalization women and children challenges of our times combat malaria respond democracy human potential. Safeguards support human rights, civil society global leaders. </td>
-        <td>Open</td>
-        <td>Robert Engineer</td>
-      </tr>
-      <tr>
-        <td>003</td>
-        <td>Header Bug</td>
-        <td>00:01:00</td>
-        <td>Airbnb</td>
-        <td>mary.george@airbnb.com</td>
-        <td>Change-makers pathway to a better life globalization women and children challenges of our times combat malaria respond democracy human potential. Safeguards support human rights, civil society global leaders. </td>
-        <td>Open</td>
-        <td>Robert Engineer</td>
-      </tr>
-      <tr>
-        <td>004</td>
-        <td>Header Bug</td>
-        <td>00:01:00</td>
-        <td>Airbnb</td>
-        <td>mary.george@airbnb.com</td>
-        <td>Change-makers pathway to a better life globalization women and children challenges of our times combat malaria respond democracy human potential. Safeguards support human rights, civil society global leaders. </td>
-        <td>Open</td>
-        <td>Robert Engineer</td>
-      </tr>
+    <tr ng-repeat="row in rowCollection">
+      <td>{{row.id}}</td>
+      <td style="white-space: nowrap;">{{row.name}}</td>
+      <td>{{row.timestamp}}</td>
+      <td>{{row.customer}}</td>
+      <td>{{row.customeremail}}</td>
+      <td>{{row.description}}</td>
+      <td>{{row.status}}</td>
+      <td style="white-space: nowrap;">{{row.employee}}</td>
+      <td>
+      </td>
+    </tr>
     </tbody>
   </table>
 </div>
+<!--  End Table, with Pagination-->

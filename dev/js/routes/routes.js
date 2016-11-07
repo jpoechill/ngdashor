@@ -7,11 +7,11 @@ app.config(function($routeProvider, $locationProvider) {
     })
     .when("/employees", {
         templateUrl : "views/employees.html",
-        controller : "MainController"
+        controller : "SimpleMapController"
     })
     .when("/keymetrics", {
         templateUrl : "views/keymetrics.html",
-        controller : "MainController"
+        controller : "LineCtrl"
     })
     .when("/dataview", {
         templateUrl : "views/dataview.html",

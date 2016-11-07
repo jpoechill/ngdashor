@@ -4,15 +4,17 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
+    "angular-chart.js": "^1.0.3",
     "browser-sync": "^2.17.0",
-    "gulp-autoprefixer": "^3.1.1",
+    "chart.js": "^2.3.0",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-concat": "^2.6.0",
-    "gulp-sass": "^2.3.2",
     "gulp-concat-css": "^2.3.0",
-    "gulp-uglifycss": "^1.0.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
-    "gulp-rename": "^1.2.2"
+    "gulp-uglifycss": "^1.0.6"
   },
   "devDependencies": {
     "concat": "0.0.1-security",
