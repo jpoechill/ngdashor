@@ -1,7 +1,7 @@
 <!--  Start Header -->
 <h2>Issues</h2>
 <p>
-  <a href="#/">Back</a>
+  <a href="#/">Back to main</a>
 </p>
 <!--  End Header -->
 
@@ -10,7 +10,7 @@
   <table st-table="rowCollection" class="table table-striped">
     <thead>
     <tr>
-      <th colspan="8"><input st-search="" class="form-control" placeholder="Search DB..." type="text"/></th>
+      <th colspan="8"><input st-search="" class="form-control" placeholder="Search issues..." type="text"/></th>
     </tr>
     <tr>
       <th st-sort="id">ID</th>
@@ -31,7 +31,8 @@
       <td>{{row.customer}}</td>
       <td>{{row.customeremail}}</td>
       <td>{{row.description}}</td>
-      <td>{{row.status}}</td>
+      <td ng-if="showStatus(row.status)" style="font-weight: 100; color: green;">Open</td>
+      <td ng-if="!showStatus(row.status)" style="font-weight: 100; color: red;">Closed</td>
       <td style="white-space: nowrap;">{{row.employee}}</td>
       <td>
       </td>
