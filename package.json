@@ -1,5 +1,5 @@
 {
-  "name": "corporate-dashboard",
+  "name": "dashor",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -31,12 +31,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jpoechill/transportation-app.git"
+    "url": "git+https://github.com/jpoechill/dashor.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jpoechill/transportation-app/issues"
+    "url": "https://github.com/jpoechill/dashor/issues"
   },
-  "homepage": "https://github.com/jpoechill/transportation-app#readme"
+  "homepage": "https://github.com/jpoechill/dashor#readme"
 }
