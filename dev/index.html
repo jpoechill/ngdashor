@@ -24,8 +24,12 @@
     <!--  Include GeoCharts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+    <!--build:css css/styles.min.css-->
     <!-- Custom styles for this template -->
     <link href="css/styles.main.min.css" rel="stylesheet">
+    
+    <!--endbuild-->
+
 
     <!-- CDN: Angular 1.x JS, Angular Routing -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
@@ -38,12 +42,10 @@
 
     <!--  Angular Chart and Chart.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
-    <script src="js/lib/angular-chart.js"></script>
 
     <!-- Leaflet.js -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
-    <script src="js/lib/angular-leaflet-directive.min.js"></script>
 
     <!-- D3.js -->
     <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -101,20 +103,24 @@
 
 
         <div class="col-sm-3 col-md-2 sidebar">
-          <a class="navbar-brand"href="#/">
-            <strong>
-              <span role="heading" aria-level="1" style="color: #333; font-size: 1.5em; font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;">
-                Dashor
-              </span>
-            </strong>
-          </a>
+          <ul class="nav nav-sidebar" style="width: 100%;">
+            <li>
+              <a class="navbar-brand" href="#/">
+                <strong>
+                  <span role="heading" aria-level="1" style="color: #333; font-size: 1.6em; font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;">
+                    Dashor
+                  </span>
+                </strong>
+              </a>
+            </li>
+          </ul>
           <ul class="nav nav-sidebar" style="width: 100%;">
             <!-- class="active" -->
             <!-- <li><a href="#/">Overview <span class="sr-only">(current)</span></a></li> -->
             <!-- <li><a href="#/">Home</a></li> -->
-            <li><a ng-click="reloadRoute()" href="#/employees">Employees</a></li>
-            <li><a href="#/keymetrics">Key Metrics</a></li>
-            <li><a href="#/dataview">Data View</a></li>
+            <li><a ng-click="reloadRoute()" href="#/employees" style="font-size: .8rem;"><i class="fa fa-user fa-fw" aria-hidden="true" style="color: #45B7CD; font-size: .8rem; padding-right: 6px;"></i> Employees</a></li>
+            <li><a href="#/keymetrics" style="font-size: .8rem;"><i class="fa fa-area-chart fa-fw" aria-hidden="true" style="color: #45B7CD; font-size: .8rem; padding-right: 6px;"></i> Key Metrics</a></li>
+            <li><a href="#/dataview" style="font-size: .8rem;"><i class="fa fa-files-o fa-fw" aria-hidden="true" style="color: #45B7CD; font-size: .8rem; padding-right: 6px;"></i> Data View</a></li>
           </ul>
           <!-- <ul class="nav nav-sidebar">
             <li><a href="#">> data.CSV</a></li>
@@ -145,6 +151,12 @@
     <!-- Geo-mapping Example -->
     <script src="js/geo-map.js"></script>
     <!-- Geo-mapping Example -->
+
+    <!--  Leaflet.js -->
+    <script src="js/lib/angular-leaflet-directive.min.js"></script>
+
+    <!--  Angular-Chart and Chart.js -->
+    <script src="js/lib/angular-chart.js"></script>
 
     <!-- endbuild -->
 

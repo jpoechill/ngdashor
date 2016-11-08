@@ -115,12 +115,6 @@ app.controller("LineCtrl", function ($scope) {
           type: 'linear',
           display: true,
           position: 'left'
-        },
-        {
-          id: 'y-axis-2',
-          type: 'linear',
-          display: true,
-          position: 'right'
         }
       ]
     }
@@ -135,24 +129,24 @@ app.controller("BarCtrl", function ($scope) {
   $scope.colors = ['#45b7cd', '#ff6384', '#ff8e72', '#45b7cd', '#ff6384', '#ff8e72'];
 
   $scope.data = [
-    [65, 59, 80, 81, 56, 55, 40]
+    [2, 9, 8, 3, 8, 4, 9]
     // [28, 48, 40, 19, 86, 27, 90]
   ];
 });
 
 app.controller("DoughnutCtrl", function ($scope) {
   $scope.labels = ["Opened Issues", "Closed Issues", "All Issues"];
-  $scope.data = [300, 144];
+  $scope.data = [12, 8];
 });
 
 app.controller("RadarCtrl", function ($scope) {
-  $scope.labels =["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"];
+  $scope.labels =["Designing", "Coding", "Cycling"];
 
   $scope.colors = ['#45b7cd', '#ff6384', '#ff8e72', '#45b7cd', '#ff6384', '#ff8e72'];
 
   $scope.data = [
-    // [65, 59, 90, 81, 56, 55, 40],
-    [28, 48, 40, 19, 96, 27, 100]
+    [4, 20, 16],
+    // [14, 11, 10, 40]
   ];
 });
 
@@ -251,25 +245,25 @@ app.controller("SimpleMapController", [ '$scope', function($scope) {
                       '#FFEDA0';
     }
 
-    var legend = L.control({position: 'bottomright'});
-
-    legend.onAdd = function (map) {
-
-        var div = L.DomUtil.create('div', 'info legend'),
-            grades = [0, 10, 20, 50, 100, 200, 500, 1000],
-            labels = [];
-
-        // loop through our density intervals and generate a label with a colored square for each interval
-        for (var i = 0; i < grades.length; i++) {
-            div.innerHTML +=
-                '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-                grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
-        }
-
-        return div;
-    };
-
-    legend.addTo(mymap);
+    // var legend = L.control({position: 'bottomright'});
+    //
+    // legend.onAdd = function (map) {
+    //
+    //     var div = L.DomUtil.create('div', 'info legend'),
+    //         grades = [0, 10, 20, 50, 100, 200, 500, 1000],
+    //         labels = [];
+    //
+    //     // loop through our density intervals and generate a label with a colored square for each interval
+    //     for (var i = 0; i < grades.length; i++) {
+    //         div.innerHTML +=
+    //             '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+    //             grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+    //     }
+    //
+    //     return div;
+    // };
+    //
+    // legend.addTo(mymap);
 
 
     var geojsonFeature = {
