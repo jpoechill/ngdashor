@@ -1,0 +1,50 @@
+<h2>Key Metrics</h2>
+<p>
+  <a href="#/">Back to main</a>
+</p>
+<div class="row">
+  <div class="col-md-6" ng-controller="DoughnutCtrl">
+    <span style="font-size: .75rem; font-weight: 700; font-family: 'Montserrat';">OPEN ISSUES</span>
+    <canvas id="doughnut" class="chart chart-doughnut"
+      chart-data="data" chart-labels="labels" chart-colors="colors">
+    </canvas>
+  </div>
+  <div class="col-md-6" ng-controller="BarCtrl">
+    <span style="font-size: .75rem; font-weight: 700; font-family: 'Montserrat';">REPORTED ISSUES</span>
+    <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series" chart-colors="colors">
+    </canvas>
+  </div>
+</div>
+<div class="row" style="padding-top: 14px;">
+  <div class="col-md-6" ng-controller="LineCtrl">
+    <span style="font-size: .75rem; font-weight: 700; font-family: 'Montserrat';">PAYING CUSTOMERS</span>
+    <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options"
+    chart-dataset-override="datasetOverride" chart-click="onClick" chart-colors="colors">
+    </canvas>
+  </div>
+  <div class="col-md-6" ng-controller="RadarCtrl">
+    <span style="font-size: .75rem; font-weight: 700; font-family: 'Montserrat';">RADAR CHART</span>
+    <canvas id="radar" class="chart chart-radar"
+  chart-data="data" chart-options="options" chart-labels="labels" chart-colors="colors">
+</canvas>
+  </div>
+</div>
+<!-- <div class="row">
+  <div class="col-md-6">
+    <img src="img/barchart.png" width="100%" alt="" />
+  </div>
+  <div class="col-md-6">
+    <img src="img/linechart.png" width="100%" alt="" />
+  </div>
+</div> -->
+<!-- <div class="row">
+  <div class="col-md-12">
+    <img src="img/portland-dash.png" width="100%" alt="" />
+  </div>
+</div> -->
+<!-- <div ng-controller="SalesController">
+  <p>
+    <h1>Today's Sales Chart</h1>
+    <div linear-chart chart-data="salesData"></div>
+  </p>
+</div> -->
