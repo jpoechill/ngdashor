@@ -6,8 +6,8 @@ app.config(function($routeProvider, $locationProvider) {
         controller : "MainController"
     })
     .when("/employees", {
-        templateUrl : "views/employees.html",
-        controller : "SimpleMapController"
+        templateUrl : "views/map.html",
+        controller : "MapController"
     })
     .when("/keymetrics", {
         templateUrl : "views/keymetrics.html",
@@ -15,7 +15,7 @@ app.config(function($routeProvider, $locationProvider) {
     })
     .when("/dataview", {
         templateUrl : "views/dataview.html",
-        controller : "MainController"
+        controller : "DataController"
     });
 
     // use the HTML5 History API

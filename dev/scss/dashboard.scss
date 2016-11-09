@@ -1,12 +1,7 @@
-/*
- * Base structure
- */
-
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
+  padding-top: 20px;
 }
-
 
 /*
  * Global add-ons
@@ -67,9 +62,7 @@ body {
 }
 
 
-/*
- * Main content
- */
+// Main Content
 
 .main {
   padding: 32px;
@@ -81,9 +74,7 @@ body {
   }
 }
 
-/*
- * Placeholder dashboard ideas
- */
+// Placeholder dashboard ideas
 
 .placeholders {
   margin-bottom: 0px;
@@ -100,4 +91,4 @@ body {
   // border-radius: 20%;
 }
 
-#mapid { height: 500px; }
+#mapid { height: 600px; }

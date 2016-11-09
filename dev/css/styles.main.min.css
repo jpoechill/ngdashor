@@ -1,12 +1,7 @@
-/*
- * Base structure
- */
-
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
+  padding-top: 20px;
 }
-
 
 /*
  * Global add-ons
@@ -67,9 +62,7 @@ body {
 }
 
 
-/*
- * Main content
- */
+// Main Content
 
 .main {
   padding: 32px;
@@ -81,9 +74,7 @@ body {
   }
 }
 
-/*
- * Placeholder dashboard ideas
- */
+// Placeholder dashboard ideas
 
 .placeholders {
   margin-bottom: 0px;
@@ -100,7 +91,7 @@ body {
   // border-radius: 20%;
 }
 
-#mapid { height: 500px; }
+#mapid { height: 600px; }
 
 .bg-inverse {
   background-color: #FFFFFF !important;
@@ -184,12 +175,58 @@ a {
   top: 0px;
 }
 
-ul li {
-  display: list-item;
+// ul li {
+//   display: list-item;
+// }
+
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+  vertical-align: bottom;
+  margin-left: 0;
+  border-bottom-left-radius: .25rem;
+  border-top-left-radius: .25rem;
+}
+
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+  vertical-align: bottom;
+  margin-left: 0;
+  border-bottom-right-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+  vertical-align: bottom;
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #428bca;
+    border-color: #428bca;
+}
+
+.pagination>li>a {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  float: left;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  color: #0275d8;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.pagination>li {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  float: left;
+  margin-left: -1px;
+  color: #0275d8;
+  text-decoration: none;
+  background-color: #fff;
 }
 
 body {
-  padding-top: 0px;
   font-family: 'San Francisco Display Regular';
 }
 
@@ -227,48 +264,45 @@ table td {
     opacity: 0.7;
 }
 
-// @font-face {
-//   font-family: "San Francisco Display Ultralight";
-//   font-style: normal;
-//   font-weight: 400;
-//   src: url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.eot?#iefix) format("embedded-opentype"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff2) format("woff2"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff) format("woff"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.svg#San Francisco Display Ultralight") format("svg")
-// }
-//
-// @font-face {
-//   font-family: "San Francisco Display Thin";
-//   font-style: normal;
-//   font-weight: 400;
-//   src: url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.eot?#iefix) format("embedded-opentype"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff2) format("woff2"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff) format("woff"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.svg#San Francisco Display Thin") format("svg")
-// }
-
 @font-face {
   font-family: "San Francisco Display Regular";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/sanfranciscodisplay-regular-webfont.woff");
 }
-//
-// @font-face {
-//   font-family: "San Francisco Display Medium";
-//   font-style: normal;
-//   font-weight: 400;
-//   src: url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.eot?#iefix) format("embedded-opentype"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff2) format("woff2"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff) format("woff"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.svg#San Francisco Display Medium") format("svg")
-// }
-//
-// @font-face {
-//   font-family: "San Francisco Display Semibold";
-//   font-style: normal;
-//   font-weight: 400;
-//   src: url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.eot?#iefix) format("embedded-opentype"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff2) format("woff2"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff) format("woff"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.svg#San Francisco Display Semibold") format("svg")
-// }
-//
-// @font-face {
-//   font-family: "San Francisco Display Bold";
-//   font-style: normal;
-//   font-weight: 400;
-//   src: url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.eot?#iefix) format("embedded-opentype"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2) format("woff2"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff) format("woff"), url(http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.svg#San Francisco Display Bold") format("svg")
-// }
+
+.box {
+  margin-bottom: 30px;
+  background-color: #fff;
+  height: 100%;
+  min-height: 270px;
+  overflow: hidden;
+  color: #373a3c;
+  padding-top: 20px;
+  font-size: 1rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+  line-height: 1.5;
+  border-radius: 4px;
+  padding: 0;
+  box-shadow: 0 10px 12px #888;
+}
+
+body {
+  background-color: #F8F8F8;
+}
 
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #FAFBFD;
 }
+
+.table td, .table th {
+    border-top: 0px;
+}
+
+// .st-sort-ascent:before{
+//     content: '\25B2';
+// }
+//
+// .st-sort-descent:before{
+//     content: '\25BC';
+// }

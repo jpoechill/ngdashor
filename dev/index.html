@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="img/favicon.png">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>Dashor App</title>
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -27,7 +27,6 @@
     <!--build:css css/styles.min.css-->
     <!-- Custom styles for this template -->
     <link href="css/styles.main.min.css" rel="stylesheet">
-    
     <!--endbuild-->
 
 
@@ -49,30 +48,6 @@
 
     <!-- D3.js -->
     <script src="https://d3js.org/d3.v3.min.js"></script>
-
-    <script type="text/javascript">
-      google.charts.load('upcoming', {'packages':['geochart']});
-      google.charts.setOnLoadCallback(drawRegionsMap);
-
-      function drawRegionsMap() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Country', 'Popularity'],
-          ['Germany', 200],
-          ['United States', 300],
-          ['Brazil', 400],
-          ['Canada', 500],
-          ['France', 600],
-          ['RU', 700]
-        ]);
-
-        var options = {};
-
-        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
-
-        chart.draw(data, options);
-      }
-    </script>
 
 
 
@@ -96,7 +71,7 @@
           <a class="nav-item nav-link" href="#/" style="color: grey;">Help</a>
         </nav>
       </div> -->
-    </nav>
+    <!-- </nav> -->
 
     <div class="container-fluid">
       <div class="row">
@@ -141,11 +116,16 @@
     <!-- End Dashor App-->
 
     <!-- Dashor Routes -->
-    <script src="js/routes/routes.js"></script>
+    <script src="js/routes.js"></script>
     <!-- Dashor Routes -->
 
     <!-- Dashor Controllers -->
     <script src="js/controllers/MainController.js"></script>
+    <script src="js/controllers/DonutController.js"></script>
+    <script src="js/controllers/BarController.js"></script>
+    <script src="js/controllers/DataController.js"></script>
+    <script src="js/controllers/LineController.js"></script>
+    <script src="js/controllers/SimpleMapController.js"></script>
     <!-- Dashor Controller -->
 
     <!-- Geo-mapping Example -->
@@ -157,6 +137,9 @@
 
     <!--  Angular-Chart and Chart.js -->
     <script src="js/lib/angular-chart.js"></script>
+
+    <!--  Smart-Table.js -->
+    <script src="js/lib/smart-table.js"></script>
 
     <!-- endbuild -->
 
