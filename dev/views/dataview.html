@@ -13,7 +13,7 @@
     <thead>
       <tr>
         <th colspan="8">
-          <input st-search placeholder="Search issues..." style="font-size: .8rem;" class="input-sm form-control" type="search"/>
+          <input st-search placeholder="Search issues..." style="font-size: .8rem; font-weight: lighter;font-family: sans-serif;" class="input-sm form-control" type="search"/>
         </th>
       </tr>
       <tr>
@@ -35,15 +35,15 @@
         <td>{{row.customer}}</td>
         <td>{{row.customeremail}}</td>
         <td>{{row.description}}</td>
-        <td ng-if="showStatus(row.status)" style="font-weight: 100; color: green;">Open</td>
-        <td ng-if="!showStatus(row.status)" style="font-weight: 100; color: red;">Closed</td>
+        <td ng-if="showStatus(row.status)" style="font-weight: 400; color: green;">Open</td>
+        <td ng-if="!showStatus(row.status)" style="font-weight: 400; color: red;">Closed</td>
         <td style="white-space: nowrap;">{{row.employee}}</td>
       </tr>
     </tbody>
     <tfoot>
     	<tr>
     		<td colspan="8" align="center" class="text-center" style="align: center; padding: 0px;">
-        	<div  st-items-by-page="4" st-pagination=""></div>
+        	<div  st-items-by-page="5" st-pagination=""></div>
 <!--
           <nav aria-label="Page navigation">
             <ul class="pagination">

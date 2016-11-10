@@ -25,12 +25,12 @@ app.controller("MapController", ['$scope', function($scope) {
 
   // Marker and circle 247.6062° N, 122.3321° W‎47.608013	DMS Lat‎: ‎47° 36' 28.8468'' N
 
-  var marker = L.marker([40.7608, -111.8910]).addTo(mymap).bindPopup("Salt Lake City <br><span style='font-size: 12px; font-weight: 600;'>14 Employees</span>");
-  var marker = L.marker([37.8033, -122.2711]).addTo(mymap).bindPopup("Oakland <br><span style='font-size: 12px; font-weight: 600;'>10 Employees</span>");
-  var marker = L.marker([37.7739, -122.4312]).addTo(mymap).bindPopup("San Francsico <br><span style='font-size: 12px; font-weight: 600;'>10 Employees</span>");
-  var marker = L.marker([40.7128, -74.0059]).addTo(mymap).bindPopup("New York <br><span style='font-size: 12px; font-weight: 600;'>10 Employees</span>");
-  var marker = L.marker([30.2672, -97.7431]).addTo(mymap).bindPopup("Austin <br><span style='font-size: 12px; font-weight: 600;'>10 Employees</span>");
-  var marker = L.marker([47.608, -122.3351]).addTo(mymap).bindPopup("Seattle <br><span style='font-size: 12px; font-weight: 600;'>10 Employees</span>");
+  var marker = L.marker([40.7608, -111.8910]).addTo(mymap).bindPopup("Salt Lake City, UT <br><span style='font-size: 12px; font-weight: 600;'>14 Employees</span>");
+  var marker = L.marker([37.8033, -122.2711]).addTo(mymap).bindPopup("Oakland, CA <br><span style='font-size: 12px; font-weight: 600;'>10 Employees</span>");
+  var marker = L.marker([37.7739, -122.4312]).addTo(mymap).bindPopup("San Francsico, CA <br><span style='font-size: 12px; font-weight: 600;'>10 Employees</span>");
+  var marker = L.marker([40.7128, -74.0059]).addTo(mymap).bindPopup("New York, NY <br><span style='font-size: 12px; font-weight: 600;'>10 Employees</span>");
+  var marker = L.marker([30.2672, -97.7431]).addTo(mymap).bindPopup("Austin, TX <br><span style='font-size: 12px; font-weight: 600;'>10 Employees</span>");
+  var marker = L.marker([47.608, -122.3351]).addTo(mymap).bindPopup("Seattle, WA <br><span style='font-size: 12px; font-weight: 600;'>10 Employees</span>");
   // var circle2 = L.circle([37.8033, -122.2761], {
   // color: 'red',
   // fillColor: '#f03',

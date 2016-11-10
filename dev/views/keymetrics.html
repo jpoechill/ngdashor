@@ -6,22 +6,22 @@
 </ul>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-6 " style="padding: 0px; float: left;" ng-controller="DoughnutCtrl">
-      <div class="box" style="height: 270px; padding: 10px; margin-right: 10px; vertical-align: middle;">
-        <div class="" style="padding-top: 8px;">
-          <p style="padding-top: 14px; text-align: center; vertical-align: middle;">
-            <span style="font-size: 100px; font-weight: 700; font-family: 'Montserrat'">48</span>
+    <div class="col-xs-12 col-md-6 " style="padding: 0px; float: left; text-align: center;" ng-controller="DoughnutCtrl">
+      <div class="box" style="height: 216px; padding: 10px; margin-right: 10px;">
+        <span style="text-align: center; font-weight: 700; font-size: .75rem; font-family: 'Montserrat';">
+          OPEN ISSUES
+        </span>
+        <div>
+          <p style="padding-top: 12px; text-align: center; vertical-align: middle;">
+            <span style="color: #1585CE; font-size: 84px; font-weight: 700; font-family: 'Montserrat'">48</span>
           </p>
         </div>
-        <p style="text-align: center; font-weight: 700; color: teal; font-size: .75rem; font-family: 'Montserrat';">
-          OPEN ISSUES
-        </p>
       </div>
     </div>
     <div class="col-xs-12 col-md-6" style="padding: 0px; float: left;"  ng-controller="BarCtrl">
-      <div class="box" style="height: 270px; padding: 10px; margin-left: 10px; text-align: center;">
+      <div class="box" style="height: 216px; padding: 10px; margin-left: 10px; text-align: center;">
         <span style="font-size: .75rem; font-weight: 700; font-family: 'Montserrat';">REPORTED ISSUES</span>
-        <canvas id="bar" class="chart chart-bar" style="margin-top: 8px;" chart-data="data" chart-labels="labels" chart-series="series" chart-colors="colors">
+        <canvas id="bar" class="chart chart-bar" height="144px" style="margin-top: 8px;" chart-data="data" chart-labels="labels" chart-series="series" chart-colors="colors">
         </canvas>
       </div>
     </div>

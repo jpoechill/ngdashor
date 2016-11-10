@@ -1,6 +1,6 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 20px;
+  padding-top: 0px;
 }
 
 /*
@@ -62,7 +62,7 @@ body {
 }
 
 .main {
-  padding: 32px;
+  padding: 16px;
 }
 @media (min-width: 768px) {
   .main {
@@ -85,7 +85,7 @@ body {
   display: inline-block;
 }
 
-#mapid { height: 600px; }
+#mapid { height: 574px; }
 
 .bg-inverse {
   background-color: #FFFFFF !important;
@@ -265,7 +265,7 @@ table td {
   margin-bottom: 30px;
   background-color: #fff;
   height: 100%;
-  min-height: 270px;
+  min-height: 264px;
   overflow: hidden;
   color: #373a3c;
   padding-top: 20px;

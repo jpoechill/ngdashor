@@ -1,6 +1,6 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 20px;
+  padding-top: 0px;
 }
 
 /*
@@ -62,7 +62,7 @@ body {
 }
 
 .main {
-  padding: 32px;
+  padding: 16px;
 }
 @media (min-width: 768px) {
   .main {
@@ -85,4 +85,4 @@ body {
   display: inline-block;
 }
 
-#mapid { height: 600px; }
+#mapid { height: 574px; }
