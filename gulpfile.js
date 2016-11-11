@@ -33,8 +33,8 @@ gulp.task('browser-sync', function() {
 // Sass
 gulp.task('sass', function () {
   return gulp.src('dev/scss/**/*.scss')
-    // .pipe(sass())
-    // .pipe(cssnano())
+    .pipe(sass())
+    .pipe(cssnano())
     .pipe(concat('styles.main.css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dev/css/'))
@@ -70,6 +70,8 @@ gulp.task('useref', function(){
 gulp.task('watch', function () {
     gulp.watch("dev/scss/*.scss", ['sass']);
     gulp.watch("dev/*.html").on('change', bs.reload);
+    gulp.watch("dev/views/*.html").on('change', bs.reload);
+    gulp.watch("dev/js/**/*.js").on('change', bs.reload);
     gulp.watch("dev/js/*.js").on('change', bs.reload);
 });
 

@@ -3,7 +3,7 @@ app.controller('DataController', ['$scope', '$http', function ($scope, $http) {
   $scope.displayedCollection = [];
   $scope.itemsByPage = 2;
 
-  $http.get('data/issues.json')
+  $http.get('data/json/issues.json')
   .then(function(res){
     $scope.rowCollection = res.data;
     $scope.displayedCollection = res.data;

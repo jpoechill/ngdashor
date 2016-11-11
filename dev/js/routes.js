@@ -10,14 +10,10 @@ app.config(function($routeProvider, $locationProvider) {
         controller : "MapController"
     })
     .when("/keymetrics", {
-        templateUrl : "views/keymetrics.html",
-        controller : "LineCtrl"
+        templateUrl : "views/keymetrics.html"
     })
     .when("/dataview", {
         templateUrl : "views/dataview.html",
         controller : "DataController"
     });
-
-    // use the HTML5 History API
-    // $locationProvider.html5Mode(true);
 });
