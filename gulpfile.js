@@ -52,7 +52,7 @@ gulp.task('scripts', function() {
   return gulp.src('dev/js/**/*.js')
     .pipe(concat('main.js'))
     .pipe(rename({suffix: '.min'}))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('dev/js/'));
 });
 
@@ -104,11 +104,11 @@ gulp.task('useref:dist', function(){
 // Browser sync
 var bsDist = require('browser-sync').create();
 gulp.task('browser-sync:dist', function() {
-    bsDist.init({
-        server: {
-            baseDir: "dist"
-        }
-    });
+  bsDist.init({
+    server: {
+      baseDir: "dist"
+    }
+  });
 });
 
 // Move service worker

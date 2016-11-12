@@ -1,19 +1,17 @@
 <!--  Start Header -->
-<ul style="padding: 0px;">
-  <li style="display: inline; font-family: 'Montserrat';
-    font-weight: 700; font-size: 2rem; padding-right: 10px;
-">Issues</li>
-  <li style="display: inline;"><small><a href="#/" style="color: grey;">Back to main</a></small></li>
+<ul class="page-header">
+  <li>Issues</li>
+  <li><a href="#/">Back to main</a></li>
 </ul>
 <!--  End Header -->
 
 <!--  Start Data Table, with Pagination-->
 <div class="box" style="padding: 0px;">
-  <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped" style="min-height: 600px; margin-bottom: 0px;">
+  <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
     <thead>
       <tr>
         <th colspan="8">
-          <input st-search placeholder="Search issues..." style="font-size: .8rem; font-weight: lighter;font-family: sans-serif;" class="input-sm form-control" type="search"/>
+          <input st-search placeholder="Search issues..." class="input-sm form-control" type="search"/>
         </th>
       </tr>
       <tr>
@@ -21,7 +19,7 @@
         <th st-sort="name">NAME</th>
         <th st-sort="timestamp">TIMESTAMP</th>
         <th st-sort="customer">CUSTOMER</th>
-        <th st-sort="customeremail" style="white-space: nowrap;">CUSTOMER EMAIL</th>
+        <th st-sort="customeremail">CUSTOMER EMAIL</th>
         <th st-sort="description">DESCRIPTION</th>
         <th st-sort="status">STATUS</th>
         <th st-sort="employees">EMPLOYEE</th>
@@ -30,42 +28,20 @@
     <tbody>
       <tr ng-repeat="row in displayedCollection">
         <td>{{row.id}}</td>
-        <td style="white-space: nowrap;">{{row.name}}</td>
+        <td class="no-wrap">{{row.name}}</td>
         <td>{{row.timestamp}}</td>
         <td>{{row.customer}}</td>
         <td>{{row.customeremail}}</td>
         <td>{{row.description}}</td>
-        <td ng-if="showStatus(row.status)" style="font-weight: 400; color: green;">Open</td>
-        <td ng-if="!showStatus(row.status)" style="font-weight: 400; color: red;">Closed</td>
-        <td style="white-space: nowrap;">{{row.employee}}</td>
+        <td ng-if="showStatus(row.status)" class="open">Open</td>
+        <td ng-if="!showStatus(row.status)" class="closed">Closed</td>
+        <td class="no-wrap">{{row.employee}}</td>
       </tr>
     </tbody>
     <tfoot>
     	<tr>
-    		<td colspan="8" align="center" class="text-center" style="align: center; padding: 0px;">
-        	<div  st-items-by-page="5" st-pagination=""></div>
-<!--
-          <nav aria-label="Page navigation">
-            <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                  <span class="sr-only">Previous</span>
-                </a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">4</a></li>
-              <li class="page-item"><a class="page-link" href="#">5</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </li>
-            </ul>
-          </nav> -->
+    		<td colspan="8" align="center">
+        	<div st-items-by-page="5" st-pagination=""></div>
     		</td>
     	</tr>
   	</tfoot>

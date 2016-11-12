@@ -16,4 +16,7 @@ app.controller("BarCtrl", function ($scope, $http) {
   }
 
   retrieveAndUpdateItems();
+
+  // Query datafile
+  $interval(retrieveAndUpdateItems, 3000, 0);
 });

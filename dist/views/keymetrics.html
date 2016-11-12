@@ -1,26 +1,26 @@
-<ul style="padding: 0px;">
-  <li style="display: inline; font-family: 'Montserrat';
-    font-weight: 700; font-size: 2rem; padding-right: 10px;
-">Key Metrics</li>
-  <li style="display: inline;"><small><a href="#/" style="color: grey;">Back to main</a></small></li>
+<!--  Start Header -->
+<ul class="page-header">
+  <li>Key Metrics</li>
+  <li><a href="#/">Back to main</a></li>
 </ul>
+<!--  End Header -->
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-6 " style="padding: 0px; float: left; text-align: center;" ng-controller="DoughnutCtrl">
+    <div class="col-xs-12 col-md-6" style="padding: 0px; float: left; text-align: center;" ng-controller="OpenIssuesController">
       <div class="box" style="height: 216px; padding: 10px; margin-right: 10px;">
-        <span style="text-align: center; font-weight: 700; font-size: .75rem; font-family: 'Montserrat';">
+        <span class="keymetrics-item-title">
           OPEN ISSUES
         </span>
-        <div>
+        <div> <!-- 1585CE -->
           <p style="padding-top: 12px; text-align: center; vertical-align: middle;">
-            <span style="color: #1585CE; font-size: 84px; font-weight: 700; font-family: 'Montserrat'">48</span>
+            <span class="issues-num">{{issues}}</span>
           </p>
         </div>
       </div>
     </div>
-    <div class="col-xs-12 col-md-6" style="padding: 0px; float: left;"  ng-controller="BarCtrl">
+    <div class="col-xs-12 col-md-6" style="padding: 0px; float: left;" ng-controller="BarCtrl">
       <div class="box" style="height: 216px; padding: 10px; margin-left: 10px; text-align: center;">
-        <span style="font-size: .75rem; font-weight: 700; font-family: 'Montserrat';">REPORTED ISSUES</span>
+        <span class="keymetrics-item-title">REPORTED ISSUES</span>
         <canvas id="bar" class="chart chart-bar" height="144px" style="margin-top: 8px;" chart-data="data" chart-labels="labels" chart-series="series" chart-colors="colors">
         </canvas>
       </div>
@@ -28,7 +28,7 @@
   </div>
   <div class="row" style="margin-top: 0px;">
     <div class="col-xs-12 col-md-12 box" style="padding: 10px; text-align: center" ng-controller="LineCtrl">
-      <span style="font-size: .75rem; font-weight: 700; font-family: 'Montserrat';">PAYING CUSTOMERS</span>
+      <span class="keymetrics-item-title">PAYING CUSTOMERS</span>
       <canvas id="line" class="chart chart-line" style="margin-top: 8px;" height="76px" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options"
       chart-dataset-override="datasetOverride" chart-click="onClick" chart-colors="colors">
       </canvas>

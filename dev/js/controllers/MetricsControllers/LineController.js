@@ -1,21 +1,27 @@
 // Define LineCtrl
-app.controller("LineCtrl", ['$scope', '$http', function ($scope, $http) {
+app.controller("LineCtrl", ['$scope', '$http', '$interval', function ($scope, $http, $interval) {
   // Get csv
-  $http.get('data/csv/linedata.csv')
-  .then(function(response){
-    // read parsed CSV
-    var myParsedCSV = parseCSV(response.data);
+  function fetchData () {
+    $http.get('data/csv/linedata.csv')
+    .then(function(response){
+      // read parsed CSV
+      var myParsedCSV = parseCSV(response.data);
 
-    // Complete JSON formatting
-    var newJSON = convertToJSON(myParsedCSV);
+      // Complete JSON formatting
+      var newJSON = convertToJSON(myParsedCSV);
 
-    // attach result to scope
-    $scope.labels = newJSON[0].labels;
-    $scope.data = newJSON[0].data;
+      // attach result to scope
+      $scope.labels = newJSON[0].labels;
+      $scope.data = newJSON[0].data;
+    }).catch(function(error){
+      console.log("Error " + error);
+    });
+  }
 
-  }).catch(function(error){
-    console.log("Error " + error);
-  });
+  fetchData();
+
+  // Query datafile
+  $interval(fetchData, 3000, 0);
 
   $scope.onClick = function (points, evt) {
     console.log(points, evt);

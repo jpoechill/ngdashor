@@ -33,7 +33,7 @@ app.controller("MapController", ['$scope', '$http', "$interval", function($scope
   }
 
   // Query datafile
-  $interval(fetchData(), 3000, 0);
+  $interval(fetchData, 3000, 0);
 
   // Create and place markers
   var doCreateMarkers = function () {

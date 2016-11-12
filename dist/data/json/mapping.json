@@ -1,0 +1,56 @@
+[
+   {
+      "name": "San Francisco, CA",
+      "shortname": "San Francisco",
+      "coords": [
+         37.7739,
+         -122.4312
+      ],
+      "employees": 10
+   },
+   {
+      "name": "Oakland, CA",
+      "shortname": "Oakland",
+      "coords": [
+         37.8033,
+         -122.2711
+      ],
+      "employees": 12
+   },
+   {
+      "name": "Seattle, WA",
+      "shortname": "Seattle",
+      "coords": [
+         47.608,
+         -122.3351
+      ],
+      "employees": 14
+   },
+   {
+      "name": "Salt Lake City, UT",
+      "shortname": "Salt Lake City",
+      "coords": [
+         40.7608,
+         -111.891
+      ],
+      "employees": 16
+   },
+   {
+      "name": "Austin, TX",
+      "shortname": "Austin",
+      "coords": [
+         30.2672,
+         -97.7431
+      ],
+      "employees": 18
+   },
+   {
+      "name": "New York, NY",
+      "shortname": "New York",
+      "coords": [
+         40.7128,
+         -74.0059
+      ],
+      "employees": 20
+   }
+]

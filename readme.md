@@ -2,7 +2,7 @@
 
 A corporate dashboard application made with Angular 1.
 
-Topics covered: Javascript Frameworks
+Topics covered: Javascript Frameworks (separation of concerns)
 
 ## To install modules:
 1. Run `npm install` in your command line.
