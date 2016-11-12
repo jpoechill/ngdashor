@@ -1,5 +1,5 @@
 // Define MapController
-app.controller("MapController", ['$scope', '$http', function($scope, $http) {
+app.controller("MapController", ['$scope', '$http', "$interval", function($scope, $http, $interval) {
   // Setup
   angular.extend($scope, {
     defaults: {
@@ -32,7 +32,8 @@ app.controller("MapController", ['$scope', '$http', function($scope, $http) {
     });
   }
 
-  fetchData();
+  // Query datafile
+  $interval(fetchData(), 3000, 0);
 
   // Create and place markers
   var doCreateMarkers = function () {

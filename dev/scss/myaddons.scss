@@ -1,4 +1,4 @@
-// Sass variables
+// My primary styles
 $white: #333333;
 
 .bg-inverse {
@@ -9,12 +9,11 @@ $white: #333333;
   margin-top: 10px;
 }
 
-
 .axis path,
 .axis line{
   fill: none;
   stroke:black;
-  shape-rendering: crispEdge;
+  // shape-rendering: crispEdge;
 }
 
 .axis text{
@@ -83,53 +82,6 @@ a {
   top: 0px;
 }
 
-.pagination>li:first-child>a, .pagination>li:first-child>span {
-  vertical-align: bottom;
-  margin-left: 0;
-  border-bottom-left-radius: .25rem;
-  border-top-left-radius: .25rem;
-}
-
-.pagination>li:last-child>a, .pagination>li:last-child>span {
-  vertical-align: bottom;
-  margin-left: 0;
-  border-bottom-right-radius: .25rem;
-  border-top-right-radius: .25rem;
-}
-
-.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
-  vertical-align: bottom;
-    z-index: 2;
-    color: #fff;
-    cursor: default;
-    background-color: #428bca;
-    border-color: #428bca;
-}
-
-.pagination>li>a {
-  display: inline-block;
-  vertical-align: bottom;
-  position: relative;
-  float: left;
-  padding: .5rem .75rem;
-  margin-left: -1px;
-  color: #0275d8;
-  text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
-
-.pagination>li {
-  display: inline-block;
-  vertical-align: bottom;
-  position: relative;
-  float: left;
-  margin-left: -1px;
-  color: #0275d8;
-  text-decoration: none;
-  background-color: #fff;
-}
-
 body {
   font-family: 'San Francisco Display Regular';
 }
@@ -156,17 +108,6 @@ table td {
   color: #777;
 }
 
-.legend {
-    line-height: 18px;
-    color: #555;
-}
-.legend i {
-    width: 18px;
-    height: 18px;
-    float: left;
-    margin-right: 8px;
-    opacity: 0.7;
-}
 
 @font-face {
   font-family: "San Francisco Display Regular";

@@ -51,7 +51,6 @@ function convertToJSON(CSV) {
     // otherwise create new property
     if (newObj.hasOwnProperty(thisObjectTitle)) {
       newObj[thisObjectTitle].push(arr2[i]);
-      console.log("Object name exists");
     } else {
       newObj[thisObjectTitle] = [arr2[i]];
     }

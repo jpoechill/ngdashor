@@ -17,33 +17,6 @@ app.controller("LineCtrl", ['$scope', '$http', function ($scope, $http) {
     console.log("Error " + error);
   });
 
-  function convertToJSON(CSV) {
-    // capture both arays
-    var arr1 = CSV[0];
-    var arr2 = CSV[1];
-
-    // create new object
-    var newObj = {};
-
-    // map first array object names with second array object items
-    for (var i=0; i < arr1.length; i ++) {
-      // check if new object name exists
-      var thisObjectTitle = arr1[i].split("/")[0];
-
-      // add to existing property if already exists
-      // otherwise create new property
-      if (newObj.hasOwnProperty(thisObjectTitle)) {
-        newObj[thisObjectTitle].push(arr2[i]);
-        console.log("Object name exists");
-      } else {
-        newObj[thisObjectTitle] = [arr2[i]];
-      }
-    }
-
-    // complete
-    return [newObj];
-  }
-
   $scope.onClick = function (points, evt) {
     console.log(points, evt);
   };
