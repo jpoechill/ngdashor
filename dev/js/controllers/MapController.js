@@ -1,5 +1,5 @@
 // Define MapController
-app.controller("MapController", ['$scope', '$http', "$interval", function($scope, $http, $interval) {
+app.controller("MapController", ['$scope', '$http', "$interval", 'myService', function($scope, $http, $interval, myService) {
   // Setup
   angular.extend($scope, {
     defaults: {
@@ -20,6 +20,8 @@ app.controller("MapController", ['$scope', '$http', "$interval", function($scope
     markers: {}
   });
 
+  myService.sayHello("Bird is the word..!");
+
   var greenIcon = L.icon({
     iconUrl: 'leaf-green.png',
     shadowUrl: 'leaf-shadow.png',
@@ -37,14 +39,37 @@ app.controller("MapController", ['$scope', '$http', "$interval", function($scope
     .then(function(res){
       $scope.data = res.data;
       doCreateMarkers();
+
+      return "Blue";
       // updateCreateMenu();
     }).catch(function(error){
       console.log("Error " + error);
     });
   }
 
+  // fetchData through service
+  // discern if csv, or json
+  // take return and do something
+
   // Initial query
+  var myStuff = $http.get('data/json/mapping.json')
+  .then(function(res){
+    return "Blue";
+    // updateCreateMenu();
+  }).catch(function(error){
+    console.log("Error " + error);
+  });
+
+  myStuff.then(function(response) {
+    console.log(response);
+  })
+  // console.log(myStuff);
+
   fetchData();
+  // fetchData().then(function () {
+  //     console.log("Hello");
+  // });
+
 
   // Query datafile
   var intervalPromise = $interval(fetchData, 3000, 0);

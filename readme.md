@@ -1,8 +1,10 @@
 # Dashor
 
-A corporate dashboard application made with Angular 1.
+A corporate dashboard application made with Angular 1.4.8
 
 Topics covered: Javascript Frameworks (separation of concerns)
+
+Future add-ons: Better responsive tables, legend view in map, integrated services for $http calls
 
 ## To install modules:
 1. Run `npm install` in your command line.
