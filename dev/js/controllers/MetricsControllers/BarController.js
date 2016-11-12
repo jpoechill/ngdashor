@@ -1,6 +1,6 @@
 // Define BarCtrl
 app.controller("BarCtrl", function ($scope, $http, $interval) {
-  function retrieveAndUpdateItems() {
+  function fetchData() {
     $http.get('data/csv/reportedissues.csv')
     .then(function(response){
       // read parsed CSV
@@ -15,8 +15,12 @@ app.controller("BarCtrl", function ($scope, $http, $interval) {
     });
   }
 
-  retrieveAndUpdateItems();
+  // Initial query
+  fetchData();
 
   // Query datafile
-  $interval(retrieveAndUpdateItems, 3000, 0);
+  var intervalPromise = $interval(fetchData, 3000, 0);
+
+  // Cancel query on page change
+  $scope.$on('$destroy', function () { $interval.cancel(intervalPromise); });
 });

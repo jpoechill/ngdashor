@@ -18,10 +18,14 @@ app.controller("LineCtrl", ['$scope', '$http', '$interval', function ($scope, $h
     });
   }
 
+  // Initial query
   fetchData();
 
   // Query datafile
-  $interval(fetchData, 3000, 0);
+  var intervalPromise = $interval(fetchData, 3000, 0);
+
+  // Cancel query on page change
+  $scope.$on('$destroy', function () { $interval.cancel(intervalPromise); });
 
   $scope.onClick = function (points, evt) {
     console.log(points, evt);

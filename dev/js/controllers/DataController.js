@@ -4,7 +4,7 @@ app.controller('DataController', ['$scope', '$http', '$interval', function ($sco
   $scope.displayedCollection = [].concat($scope.rowCollection);
   $scope.itemsByPage = 2;
 
-  function getData () {
+  function fetchData () {
     $http.get('data/json/issues.json')
     .then(function(res){
       // Update without refresh data-table
@@ -15,10 +15,13 @@ app.controller('DataController', ['$scope', '$http', '$interval', function ($sco
   }
 
   // Initial query
-  getData();
+  fetchData();
 
   // Query datafile
-  $interval(getData, 5000, 0);
+  var intervalPromise = $interval(fetchData, 5000, 0);
+
+  // Cancel query on page change
+  $scope.$on('$destroy', function () { $interval.cancel(intervalPromise); });
 
   $scope.showStatus = function (status) {
     if (status == "Open") {

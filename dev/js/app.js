@@ -1,2 +1,2 @@
 // Dashor App.JS
-var app = angular.module('dashor', ['ngRoute', 'smart-table', 'chart.js', 'leaflet-directive']);
+var app = angular.module('dashor', ['ngRoute', 'smart-table', 'chart.js', 'leaflet-directive', 'wt.responsive']);
