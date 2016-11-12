@@ -1,5 +1,5 @@
 // Define LineCtrl
-app.controller("OpenIssuesController", function ($scope, $http, $interval) {
+app.controller("OpenIssuesController", ['$scope', '$http', '$interval', function ($scope, $http, $interval) {
   function fetchData () {
     $http.get('data/json/keymetrics.json')
     .then(function(res){
@@ -14,4 +14,4 @@ app.controller("OpenIssuesController", function ($scope, $http, $interval) {
   // Query datafile
   $interval(fetchData, 3000, 0);
 
-});
+}]);

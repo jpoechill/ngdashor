@@ -1,5 +1,5 @@
 // Define BarCtrl
-app.controller("BarCtrl", function ($scope, $http) {
+app.controller("BarCtrl", function ($scope, $http, $interval) {
   function retrieveAndUpdateItems() {
     $http.get('data/csv/reportedissues.csv')
     .then(function(response){

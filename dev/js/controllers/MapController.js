@@ -32,6 +32,8 @@ app.controller("MapController", ['$scope', '$http', "$interval", function($scope
     });
   }
 
+  fetchData();
+
   // Query datafile
   $interval(fetchData, 3000, 0);
 
