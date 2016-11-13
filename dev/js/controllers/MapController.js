@@ -20,7 +20,6 @@ app.controller("MapController", ['$scope', '$http', "$interval", 'myService', fu
     markers: {}
   });
 
-  // myService.sayHello("Bird is the word..!");
 
   // Fetch .JSON data
   var fetchData = function () {

@@ -7,7 +7,7 @@
 
 <!--  Start Data Table, with Pagination-->
 <div class="box" style="padding: 0px;">
-  <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
+  <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-responsive table-striped">
     <thead>
       <tr>
         <th colspan="8">
@@ -19,7 +19,7 @@
         <th st-sort="name">NAME</th>
         <th st-sort="timestamp">TIMESTAMP</th>
         <th st-sort="customer">CUSTOMER</th>
-        <th st-sort="customeremail">CUSTOMER EMAIL</th>
+        <th st-sort="customeremail" class="no-wrap">CUSTOMER EMAIL</th>
         <th st-sort="description">DESCRIPTION</th>
         <th st-sort="status">STATUS</th>
         <th st-sort="employees">EMPLOYEE</th>

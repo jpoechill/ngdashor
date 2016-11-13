@@ -3,7 +3,7 @@
       "name": "San Francisco, CA",
       "shortname": "San Francisco",
       "coords": [
-         30.7739,
+         37.7739,
          -122.4312
       ],
       "employees": 10
@@ -51,6 +51,6 @@
          40.7128,
          -74.0059
       ],
-      "employees": 20
+      "employees": 25
    }
 ]

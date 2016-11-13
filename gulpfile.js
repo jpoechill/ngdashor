@@ -159,8 +159,8 @@ gulp.task('serve', function (callback) {
 // Dist
 gulp.task('serve:dist', function(callback) {
     runSequence('clean:dist',
-        // ['useref:dist'],
-        ['useref:dist', 'move-templates:dist', 'move-fonts:dist', 'move-data:dist','images'],
+        'useref:dist',
+        ['move-templates:dist', 'move-fonts:dist', 'move-data:dist','images'],
         'browser-sync:dist',
         callback
     );
