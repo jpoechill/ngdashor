@@ -33,7 +33,7 @@
     "type": "git",
     "url": "git+https://github.com/jpoechill/dashor.git"
   },
-  "author": "",
+  "author": "jPoechill",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jpoechill/dashor/issues"
