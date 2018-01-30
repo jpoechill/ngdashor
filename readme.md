@@ -6,6 +6,10 @@ Topics covered: Javascript Frameworks (separation of concerns)
 
 Future add-ons: Better responsive tables, legend view in map, integrated services for $http calls
 
+## Screenshot
+
+![Screenshot](/static/dashor_map.png)
+
 ## To install modules:
 1. Run `npm install` in your command line.
 
